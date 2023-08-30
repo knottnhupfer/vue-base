@@ -1,0 +1,33 @@
+{
+  "name": "vue-js-base",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Clean base for Vue 3 UI project",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint:script": "eslint \"{src/**/*.{ts,vue},cypress/**/*.ts}\"",
+    "lint:tsc": "vue-tsc --noEmit -p tsconfig.app.json --composite false",
+    "lint": "concurrently \"npm run lint:tsc\" \"npm run lint:script\"",
+    "test:unit": "cypress run --component --quiet --reporter spec",
+    "test:unit:ui": "cypress open --component",
+    "generate:test-api": "curl -sL https://raw.githubusercontent.com/gothinkster/realworld/main/api/openapi.yml -o ./src/services/openapi.yml && sta --help"
+  },
+  "author": "David Monichi <david@monichi.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/types": "^7.22.11",
+    "@mutoe/eslint-config-preset-vue": "^3.5.3",
+    "@vitejs/plugin-vue": "^4.3.4",
+    "concurrently": "^8.2.1",
+    "cypress": "^13.0.0",
+    "eslint": "^8.48.0",
+    "eslint-plugin-chai-friendly": "^0.7.2",
+    "eslint-plugin-cypress": "^2.14.0",
+    "rollup-plugin-analyzer": "^4.0.0",
+    "swagger-typescript-api": "^13.0.3",
+    "vite": "^4.4.9",
+    "vue-tsc": "^1.8.8"
+  }
+}
