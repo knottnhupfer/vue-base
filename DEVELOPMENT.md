@@ -31,7 +31,8 @@ Generate model by OpenApi:
 ```
 
 
-Add cypress testing:
+Add testing dependencies:
 ```
     npm install --save-dev cypress
+    npm install --save-dev jest @vue/test-utils
 ```
