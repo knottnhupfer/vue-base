@@ -20,6 +20,9 @@ jobs:
     - uses: actions/setup-node@v2
       with:
           node-version: '18'
+    - name: Check node version
+      run: node --version
+
     - name: Prepare project
       run: npm install
     - name: Build project
