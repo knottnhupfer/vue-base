@@ -35,6 +35,10 @@ jobs:
         path: 'git-ops-checkout'
     - name: Print new file
       run: |
-        cd git-ops-checkout
+        pushd git-ops-checkout
         cat lombok.config
+        echo "\n\n"
         git remote -v
+        echo "\n\n"
+        popd
+        ls -l
