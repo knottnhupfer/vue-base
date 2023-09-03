@@ -31,7 +31,7 @@ jobs:
         echo "Build version: ${_BUILD_VERSION}"
     - uses: actions/checkout@v2
       with:
-        repository: 'knottnhupfer/artifactory-oss.git'
+        repository: 'knottnhupfer/artifactory-oss'
     - name: Print new file
       run: |
         cat lombok.config
