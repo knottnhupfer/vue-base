@@ -24,7 +24,7 @@ jobs:
         echo "Full Ref name: $GITHUB_REF_NAME"
         _GIT_SHORT=$(git rev-parse --short HEAD)
         _GITHUB_RUN_DATE=$(date '+%d-%m-%Y_%H:%M:%S')
+        echo "_BUILD_VERSION=${_GITHUB_RUN_DATE}_${_GIT_SHORT}" >> $GITHUB_ENV
     - name: Read variables
       run: |
-        echo "Git Short: $_GIT_SHORT"
-        echo "Github run date: $_GITHUB_RUN_DATE"
+        echo "Build version: ${_BUILD_VERSION}"
