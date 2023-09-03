@@ -22,5 +22,7 @@ jobs:
         echo "Head Ref: $GITHUB_HEAD_REF"
         echo "Full Ref: $GITHUB_REF"
         echo "Full Ref name: $GITHUB_REF_NAME"
-        GIT_SHORT=$(git rev-parse --short HEAD)
-        echo "Git Short: $GIT_SHORT"
+        _GIT_SHORT=$(git rev-parse --short HEAD)
+        _GITHUB_RUN_DATE=$($(date -u "+%Y-%m")")
+        echo "Git Short: $_GIT_SHORT"
+        echo "Github run date: $_GITHUB_RUN_DATE"
