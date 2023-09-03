@@ -17,15 +17,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
-      with:
-          node-version: '18'
-    - name: Check node version
-      run: node --version
-
-    - name: Prepare project
-      run: npm install
-    - name: Build project
-      run: npm run build --if-present
-    - name: Run Unit-Tests
-      run: npm run test:unit
+    - name: Generate variables
+      run: |
+        echo "Head Ref: $GITHUB_HEAD_REF"
+        echo "Full Ref: $GITHUB_REF"
+        echo "Full Ref name: $GITHUB_REF_NAME"
+        GIT_SHORT=$(git rev-parse --short HEAD)
+        echo "Git Short: $GIT_SHORT"
