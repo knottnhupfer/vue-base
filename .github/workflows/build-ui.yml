@@ -32,6 +32,7 @@ jobs:
     - uses: actions/checkout@v2
       with:
         repository: 'knottnhupfer/artifactory-oss'
+        path: 'git-ops-checkout'
     - name: Print new file
       run: |
-        cat lombok.config
+        cat git-ops-checkout/lombok.config
