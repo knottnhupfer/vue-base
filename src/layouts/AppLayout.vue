@@ -29,7 +29,7 @@
 
 // import { useGlobalStore } from '../stores/global-store'
 
-// import Navbar from '../components/navbar/Navbar.vue'
+import Navbar from '../components/navbar/Navbar.vue'
 // import Sidebar from '../components/sidebar/Sidebar.vue'
 
 // const GlobalStore = useGlobalStore()

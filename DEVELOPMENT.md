@@ -9,7 +9,12 @@
 
 General dependencies
 ```
-    npm install ...
+    npm install vue
+    npm install vue-router
+    npm install vue-i18n
+    npm install @intlify/unplugin-vue-i18n
+    npm install pinia
+    npm install vuestic-ui
 ```
 
 ## Add dev dependency
