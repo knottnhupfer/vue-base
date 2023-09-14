@@ -5,6 +5,13 @@
   npm init
 ```
 
+## Add runtime dependency
+
+General dependencies
+```
+    npm install ...
+```
+
 ## Add dev dependency
 
 General dependencies
@@ -23,6 +30,7 @@ ES-Linter dependencies:
     npm install --save-dev eslint-plugin-chai-friendly
     npm install --save-dev vue-tsc
     npm install --save-dev @babel/types
+    npm install --save-dev sass
 ```
 
 Generate model by OpenApi:
